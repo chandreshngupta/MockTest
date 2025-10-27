@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamPro - Online Mock Test Platform</title>
+    <meta name="description" content="Comprehensive mock test platform for competitive exams with intelligent analytics and performance tracking">
+    <meta name="keywords" content="mock test, online exam, competitive exam, test preparation, practice test">
+    <meta property="og:title" content="ExamPro - Online Mock Test Platform">
+    <meta property="og:description" content="Comprehensive mock test platform for competitive exams with intelligent analytics">
+    <meta name="twitter:title" content="ExamPro - Online Mock Test Platform">
+    <meta name="twitter:description" content="Comprehensive mock test platform for competitive exams">
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="utils/dbShim.js"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #8b5cf6;
+            --accent-color: #10b981;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-primary);
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg font-medium hover:opacity-90 transition-all;
+        }
+        .btn-secondary {
+            @apply px-6 py-3 bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] rounded-lg font-medium hover:bg-[var(--primary-color)] hover:text-white transition-all;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Hero.js"></script>
+    <script type="text/babel" src="components/Features.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

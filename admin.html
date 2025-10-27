@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin - Question Management</title>
+
+  <!-- ✅ Public React Libraries -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- ✅ Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- ✅ XLSX Library (for Excel import/export) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- ✅ Lucide Icons -->
+  <link href="https://unpkg.com/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+  <script src="utils/dbShim.js"></script>
+
+  <style type="text/tailwindcss">
+    @layer theme {
+      :root {
+        --primary-color: #3b82f6;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+  <div id="root" class="p-4"></div>
+
+  <!-- ✅ Local Component Scripts -->
+  <script type="text/babel" src="components/DashboardHeader.js"></script>
+  <script type="text/babel" src="components/Alert.js"></script>
+  <script type="text/babel" src="components/TestCreator.js"></script>
+  <script type="text/babel" src="utils/auth.js"></script>
+  <script type="text/babel" src="utils/questionManager.js"></script>
+  <script type="text/babel" src="admin-app.js"></script>
+</body>
+</html>
